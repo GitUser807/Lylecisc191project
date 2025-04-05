@@ -22,7 +22,7 @@ public class CardTest {
 
         // Test the PowerCard class (implements Special)
         System.out.println("Testing the PowerCard class:");
-        PowerCard powerCard = new PowerCard("Control", "None", 0);
+        PowerCard powerCard = new PowerCard();
         System.out.println("Before generating ability: " + powerCard);  // Should print default suit: Control, rank: None, value: 0
         
         // Generate an ability for the PowerCard
