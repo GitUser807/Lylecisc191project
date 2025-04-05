@@ -2,14 +2,14 @@ import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.Random;
 
-public class PowerCard extends Card implements Special{ // a PowerCard is IS-A Card and IS special
+public class PoweCard extends Card implements Special{ // a PowerCard is IS-A Card and IS special
 	private Hashtable<String, ArrayList<String>> abilities;
 	boolean isAbilityGenerated; //a power card knows when it has been activated
 	/**
 	 * Constructor method for the rank of the BlackjackCard
 	 * @param the desired rank of this card
 	 */
-	public PowerCard() {
+	public PoweCard() {
 		//calls super constructor
 		super("Special", "None", 0);
 		//Responsible for storing the different powercard abilities
