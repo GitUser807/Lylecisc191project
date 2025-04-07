@@ -30,7 +30,7 @@ public class PowerCard extends Card implements Special { // a PowerCard is IS-A 
 		//Might add these later if game is not too complicated
 		//abilities.get("Risk").add("ForcedCardDraw");//testing this out
 		//abilities.get("Insight").add("WhatNext");//testing this out
-		// abilities.get("Control").add("RefreshHand");//testing this out
+		//abilities.get("Control").add("RefreshHand");//testing this out
 	}
 
 	/**
