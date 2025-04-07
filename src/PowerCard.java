@@ -21,13 +21,15 @@ public class PowerCard extends Card implements Special { // a PowerCard is IS-A 
 		// Adds the keys(Ability Category) and the value(what the ability does)
 		abilities.put("Risk", new ArrayList<>());
 		abilities.get("Risk").add("DoubleDmg");
-		// abilities.get("Risk").add("ForcedCardDraw");//testing this out
 		abilities.put("Insight", new ArrayList<>());
 		abilities.get("Insight").add("WinOrLose");
-		abilities.get("Insight").add("WhatNext");
 		abilities.get("Insight").add("WinOrLose");
 		abilities.put("Control", new ArrayList<>());
 		abilities.get("Control").add("StopDrawing");
+		
+		//Might add these later if game is not too complicated
+		//abilities.get("Risk").add("ForcedCardDraw");//testing this out
+		//abilities.get("Insight").add("WhatNext");//testing this out
 		// abilities.get("Control").add("RefreshHand");//testing this out
 	}
 
