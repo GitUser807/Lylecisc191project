@@ -43,7 +43,6 @@ public class PowerCard extends Card implements Special { // a PowerCard is IS-A 
 		abilities.get("Risk").add("DoubleDmg");
 		abilities.put("Insight", new ArrayList<>());
 		abilities.get("Insight").add("WinOrLose");
-		abilities.get("Insight").add("WinOrLose");
 		abilities.put("Control", new ArrayList<>());
 		abilities.get("Control").add("StopDrawing");
 		

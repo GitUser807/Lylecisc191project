@@ -56,22 +56,19 @@ public class User extends Player{//The user IS-A player
     
     /**
 	 * mutator method that adds a card to user's hand
+	 * @param card the desired card to be added to the hand
+	 * @throws InvalidCardRuntimeException
+	 * @throws InvalidAmountOfCardsRuntimeException
 	 */
-    public void addCardToHand(Card card) {
-    	if(card!=null)
+    public void addCardToHand(Card card){
+    	if(!card.validCard())
     	{
-    		if(getHand().size()<maxCard)
-    		{
-    			getHand().add(card);
-    		}
-    		else
-    		{
-    			System.out.println("Max Card Count Reached");
-    		}
+    		throw new InvalidCardRuntimeException(card);
     	}
-    	else
+    	getHand().add(card);
+    	if(this.getHand().size()>maxCard)
     	{
-    		System.out.println("Error: Null Card Added to User's hand");
+    		throw new InvalidAmountOfCardsRuntimeException(this);
     	}
     	updateScore();
     }

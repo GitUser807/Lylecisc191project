@@ -19,6 +19,7 @@
  */
 
 import java.util.ArrayList;
+import java.util.Hashtable;
 
 public abstract class Player {
     private ArrayList<Card> hand;//a player HAS-A hand full of cards
@@ -91,9 +92,21 @@ public abstract class Player {
     {
     	this.health += amount;
     }
+    
+    /**
+	 * empty and update the players hand
+	 */
+    public void emptyHand()
+    {
+    	this.hand.clear();
+    	this.score = 0;
+    }
+    
     /**
 	 * mutator method for the hands of the player 
 	 * @param the card added to the hand of the player
 	 */
     public abstract void addCardToHand(Card card); 
+    
+
 }

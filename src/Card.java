@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.Hashtable;
+
 /**
  * Lead Author(s):
  * @author Lyle Steger
@@ -18,6 +21,10 @@
  */
 
 public class Card {
+	private static final String[] validNormalSuitDescription = {"hearts", "diamonds", "clubs", "spades"}; //Holds all legal suits a normal card can have
+	private static final String[] validPowerSuitDescription = {"Special","Risk","Insight","Control"}; //Holds all legal suits a power card can have
+	private Hashtable<String, Integer> validNormalCardPairingDescriptions;//Holds all legal rank and suit pairings that a normal card can have
+	private Hashtable<String, Integer> validPowerCardPairingDescriptions;//Holds all legal rank and suit pairings that a power card can have
 	private String suit; // a Card HAS-A suit
 	private String rank; // a Card HAS-A rank
 	private int value; // a Card HAS-A value
@@ -33,6 +40,25 @@ public class Card {
 		this.suit = suit;
 		this.rank = rank;
 		this.value = value;
+		validNormalCardPairingDescriptions = new Hashtable<>();
+		validPowerCardPairingDescriptions = new Hashtable<>();
+		validNormalCardPairingDescriptions.put("2",2);
+		validNormalCardPairingDescriptions.put("3",3);
+		validNormalCardPairingDescriptions.put("4",4);
+		validNormalCardPairingDescriptions.put("5",5);
+		validNormalCardPairingDescriptions.put("6",6);
+		validNormalCardPairingDescriptions.put("7",7);
+		validNormalCardPairingDescriptions.put("8",8);
+		validNormalCardPairingDescriptions.put("9",9);
+		validNormalCardPairingDescriptions.put("10",10);
+		validNormalCardPairingDescriptions.put("jack",10);
+		validNormalCardPairingDescriptions.put("queen",10);
+		validNormalCardPairingDescriptions.put("king",10);
+		validNormalCardPairingDescriptions.put("ace",11);
+		validPowerCardPairingDescriptions.put("None",0);
+		validPowerCardPairingDescriptions.put("DoubleDmg",0);
+		validPowerCardPairingDescriptions.put("WinOrLose",0);
+		validPowerCardPairingDescriptions.put("StopDrawing",0);
 	}
 
 	/**
@@ -88,7 +114,56 @@ public class Card {
 	public void setValue(int value) {
 		this.value = value;
 	}
-
+	
+	public boolean validNormalCardSuit()
+	{
+		for(String suit:validNormalSuitDescription)
+		{
+			if(suit.equals(this.getSuit()))
+			{
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	public boolean validPowerCardSuit()
+	{
+		if(this.getSuit().equals("Special"))
+			if (this.getRank().equals("None")&&this.getValue() == 0)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		for(String suit:validPowerSuitDescription)
+		{
+			if(suit.equals(this.getSuit()))
+			{
+				return true;
+			}
+		}
+		return false;
+	}
+	
+    public boolean validCard()
+    {
+    	if(validNormalCardSuit() 
+    			&& validNormalCardPairingDescriptions.containsKey(this.getRank()) 
+    			&& validNormalCardPairingDescriptions.get(this.getRank()) == this.getValue())
+    	{
+    		return true;
+    	}
+    	else if(validPowerCardSuit() 
+    			&& validPowerCardPairingDescriptions.containsKey(this.getRank()) 
+    			&& validPowerCardPairingDescriptions.get(this.getRank()) == this.getValue())
+    	{
+    		return true;
+    	}
+    	return false;
+    }
 	/**
 	 * Print method for the rank of the Card
 	 * 

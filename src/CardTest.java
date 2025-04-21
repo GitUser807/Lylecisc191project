@@ -86,6 +86,7 @@ public class CardTest {
 		// Print remaining deck size
 		System.out.println("Deck size after dealing: " + deck.deckSize());
 		assert (deck.deckSize() == 51);
+		System.out.println("Card Testing Successfully completed");
 		System.out.println();
 	}
 }
