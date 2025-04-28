@@ -34,14 +34,28 @@ public class PlayerTest {
 
 		//Checks to see if a valid card was successfully added to the user's hand 
 		Card card1 = new Card("spades", "5", 5);
-		user.addCardToHand(card1);
+		try {
+			user.addCardToHand(card1);
+		} catch (InvalidCardException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		} catch (InvalidAmountOfCardsException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		System.out.println("Added card: " + card1);
 		assert (user.getHand().size() == 1);
 		assert (user.getScore() == 5);
 
 		// Adds more cards to the user's hand to reach the maxCard limit
 		for (int i = 1; i < user.getMaxCard(); i++) {
-			user.addCardToHand(new Card("clubs", "2", 2));
+			try {
+				user.addCardToHand(new Card("clubs", "2", 2));
+			} catch (InvalidCardException e) {
+				e.printStackTrace();
+			} catch (InvalidAmountOfCardsException e) {
+				e.printStackTrace();
+			}
 		}
 		assert (user.getHand().size() == user.getMaxCard());
 		assert (user.getScore() == 27);
@@ -50,7 +64,7 @@ public class PlayerTest {
 		boolean exceptionThrown = false;
 		try {
 			user.addCardToHand(new Card("hearts", "3", 3));
-		} catch (InvalidAmountOfCardsRuntimeException e) {
+		} catch (InvalidAmountOfCardsException | InvalidCardException e) {
 			exceptionThrown = true;
 			System.out.println("Caught expected exception: " + e.getMessage());
 		}
@@ -64,8 +78,12 @@ public class PlayerTest {
 		exceptionThrown = false;
 		try {
 			System.out.println("Adding non valid card to hand");
-			user.addCardToHand(new Card("Dud", "3", 3));
-		} catch (InvalidCardRuntimeException e) {
+			try {
+				user.addCardToHand(new Card("Dud", "3", 3));
+			} catch (InvalidAmountOfCardsException e) {
+				e.printStackTrace();
+			}
+		} catch (InvalidCardException e) {
 			exceptionThrown = true;
 			System.out.println("Caught expected exception: " + e.getMessage());
 		}
@@ -76,8 +94,12 @@ public class PlayerTest {
 		exceptionThrown = false;
 		try {
 			System.out.println("Adding non valid card to hand");
-			user.addCardToHand(new Card("spades", "dud", 3));
-		} catch (InvalidCardRuntimeException e) {
+			try {
+				user.addCardToHand(new Card("spades", "dud", 3));
+			} catch (InvalidAmountOfCardsException e) {
+				e.printStackTrace();
+			}
+		} catch (InvalidCardException e) {
 			exceptionThrown = true;
 			System.out.println("Caught expected exception: " + e.getMessage());
 		}

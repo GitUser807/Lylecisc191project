@@ -20,9 +20,9 @@
 /**
  */
 
-public class InvalidCardRuntimeException extends RuntimeException {
+public class InvalidCardException extends Exception {
 	
-	public InvalidCardRuntimeException(Card card)
+	public InvalidCardException(Card card)
 	{
 		super(card != null
 				? "This is not a valid Card: " + 

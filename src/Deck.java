@@ -19,43 +19,61 @@
  */
 
 import java.util.ArrayList;
+import java.util.Hashtable;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Random;
 
 public class Deck {
-	private ArrayList<BlackjackCard> deckOfCards;
+	private ArrayList<BlackjackCard> deckOfPossibleCards;
+	Queue<BlackjackCard> deckOfCards;
 	private static final String[] SUITS = { "hearts", "diamonds", "clubs", "spades" };
 	private static final String[] RANKS = { "2", "3", "4", "5", "6", "7", "8", "9", "10", "jack", "queen", "king",
 			"ace" };
 	private static final int[] VALUES = { 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 11 };
 
 	public Deck() {
-		deckOfCards = new ArrayList<>();
+		deckOfCards = new LinkedList<>();
+		deckOfPossibleCards = new ArrayList<>();
 		generateDeck();
 	}
 
 	public Card dealCard() {
-		Random random = new Random();
-		if (!isDeckEmpty())
-			return deckOfCards.remove(random.nextInt(deckOfCards.size()));
+		if (isDeckEmpty())
+			return deckOfCards.poll();
 		return null;
 
 	}
 
 	public boolean isDeckEmpty() {
-		if (deckSize() == 0) {
+		if (deckOfCards.peek()!=null) {
 			return true;
 		}
 		return false;
 	}
 
+	/*
 	public int deckSize() {
 		return deckOfCards.size();
 	}
+	*/
 
 	public void generateDeck() {
+		generateAllPossibleCards();
+		Random random = new Random();
+		int randomNumber;
+		while(deckOfPossibleCards.size()>0)
+		{
+			randomNumber = random.nextInt(deckOfPossibleCards.size());
+			deckOfCards.add(deckOfPossibleCards.remove(randomNumber));
+		}
+	}
+	
+	public void generateAllPossibleCards()
+	{
 		for (int suit = 0; suit < SUITS.length; suit++) {
 			for (int rank = 0; rank < RANKS.length; rank++) {
-				deckOfCards.add(new BlackjackCard(SUITS[suit], RANKS[rank], VALUES[rank]));
+				deckOfPossibleCards.add(new BlackjackCard(SUITS[suit], RANKS[rank], VALUES[rank]));
 			}
 		}
 	}

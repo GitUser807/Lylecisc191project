@@ -1,0 +1,11 @@
+ Round: 0
+     
+     User Health: 20
+     Dealer Health: 20
+     
+     User's Starting cards: Suit: spades, Rank: 7, Value: 7 | Suit: diamonds, Rank: 9, Value: 9
+     Dealer's Starting cards: Suit: diamonds, Rank: 7, Value: 7 | Suit: clubs, Rank: jack, Value: 10
+     
+     User's score: 16
+     Dealer's score: 17
+     

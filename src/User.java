@@ -19,7 +19,7 @@
  */
 
 public class User extends Player{//The user IS-A player
-    int maxCard;//The user has a max amount of cards
+    int maxCard;//The user HAS-A max amount of cards
     
     /**
 	 * constructor for the player class
@@ -60,15 +60,15 @@ public class User extends Player{//The user IS-A player
 	 * @throws InvalidCardRuntimeException
 	 * @throws InvalidAmountOfCardsRuntimeException
 	 */
-    public void addCardToHand(Card card){
+    public void addCardToHand(Card card) throws InvalidCardException,InvalidAmountOfCardsException{
     	if(!card.validCard())
     	{
-    		throw new InvalidCardRuntimeException(card);
+    		throw new InvalidCardException(card);
     	}
     	getHand().add(card);
     	if(this.getHand().size()>maxCard)
     	{
-    		throw new InvalidAmountOfCardsRuntimeException(this);
+    		throw new InvalidAmountOfCardsException(this);
     	}
     	updateScore();
     }

@@ -105,8 +105,10 @@ public abstract class Player {
     /**
 	 * mutator method for the hands of the player 
 	 * @param the card added to the hand of the player
+     * @throws InvalidAmountOfCardsException 
+     * @throws InvalidCardException 
 	 */
-    public abstract void addCardToHand(Card card); 
+    public abstract void addCardToHand(Card card) throws InvalidCardException, InvalidAmountOfCardsException; 
     
 
 }

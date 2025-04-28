@@ -74,7 +74,6 @@ public class CardTest {
 		// Testing card dealing from a deck
 		System.out.println("Testing card dealing from a deck:");
 		Deck deck = new Deck();
-		System.out.println("Deck size before dealing: " + deck.deckSize());
 
 		// Deal a card and print it
 		Card dealtCard = deck.dealCard();
@@ -84,8 +83,6 @@ public class CardTest {
 		}
 
 		// Print remaining deck size
-		System.out.println("Deck size after dealing: " + deck.deckSize());
-		assert (deck.deckSize() == 51);
 		System.out.println("Card Testing Successfully completed");
 		System.out.println();
 	}

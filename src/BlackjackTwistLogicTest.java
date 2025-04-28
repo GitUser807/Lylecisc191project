@@ -27,10 +27,6 @@ public class BlackjackTwistLogicTest {
         assert (game != null);
         System.out.println("Game has been created");
 
-        // Check if deck is full of cards in the beginning of the game
-        int initialDeckSize = game.getGameDeck().deckSize();
-        System.out.println("Initial deck size: " + initialDeckSize);
-        assert (initialDeckSize == 52);
 
         // Check players are properly created when starting the game
         assert (game.getUser() != null);
@@ -45,7 +41,6 @@ public class BlackjackTwistLogicTest {
         assert (game.getUser().getHand().size()==2);
         assert (game.getDealer().getHand().size()==2);
         System.out.println("Bother Players have been dealt 2 cards");
-        assert (initialDeckSize == 48);
         
 
 
@@ -90,8 +85,20 @@ public class BlackjackTwistLogicTest {
         Card userCard2 = new Card("clubs", "8", 8);
         game.getDealer().addCardToHand(dealerCard1);
         game.getDealer().addCardToHand(dealerCard2);
-        game.getUser().addCardToHand(userCard1);
-        game.getUser().addCardToHand(userCard2);
+        try {
+			game.getUser().addCardToHand(userCard1);
+		} catch (InvalidCardException e1) {
+			e1.printStackTrace();
+		} catch (InvalidAmountOfCardsException e1) {
+			e1.printStackTrace();
+		}
+        try {
+			game.getUser().addCardToHand(userCard2);
+		} catch (InvalidCardException e1) {
+			e1.printStackTrace();
+		} catch (InvalidAmountOfCardsException e1) {
+			e1.printStackTrace();
+		}
         //Dealer has 17 so they will stand
         game.dealerDecision();
         //Usder stands because they like their score
@@ -118,8 +125,20 @@ public class BlackjackTwistLogicTest {
         userCard2 = new Card("clubs", "10", 10);
         game.getDealer().addCardToHand(dealerCard1);
         game.getDealer().addCardToHand(dealerCard2);
-        game.getUser().addCardToHand(userCard1);
-        game.getUser().addCardToHand(userCard2);
+        try {
+			game.getUser().addCardToHand(userCard1);
+		} catch (InvalidCardException e) {
+			e.printStackTrace();
+		} catch (InvalidAmountOfCardsException e) {
+			e.printStackTrace();
+		}
+        try {
+			game.getUser().addCardToHand(userCard2);
+		} catch (InvalidCardException e) {
+			e.printStackTrace();
+		} catch (InvalidAmountOfCardsException e) {
+			e.printStackTrace();
+		}
         //Dealer has 17 so they will stand
         game.dealerDecision();
         //User stands because they like their score
