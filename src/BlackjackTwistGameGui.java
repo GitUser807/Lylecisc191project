@@ -1,3 +1,24 @@
+/**
+ * Lead Author(s):
+ * @author Lyle Steger
+ * <<add additional lead authors here, with a full first and last name>>
+ * 
+ * Other contributors:
+ * <<add additional contributors (mentors, tutors, friends) here, with contact information>>
+ * 
+ * References:
+ * Morelli, R., & Walde, R. (2016). Java, Java, Java: Object-Oriented Problem Solving.
+ * Retrieved from https://open.umn.edu/opentextbooks/textbooks/java-java-java-object-oriented-problem-solving
+ * https://www.youtube.com/watch?v=QEF62Fm81h4
+ *  
+ * Version/date: 2.0 
+ * 
+ * Responsibilities of class: Tests to seem if the game works as intended
+ * 
+ *
+ */
+
+
 import javax.swing.*;
 import javax.swing.plaf.basic.BasicScrollBarUI;
 
@@ -450,6 +471,8 @@ public class BlackjackTwistGameGui {
 
 	/**
 	 * temporarily reveals the dealer's hand to the user after the round is over 
+	 * Citation: https://www.youtube.com/watch?v=QEF62Fm81h4
+	 * This video helped me write this method
 	 */
 	public void revealDealerCards() {
 		hitButton.setEnabled(false);
