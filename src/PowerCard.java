@@ -1,3 +1,4 @@
+
 /**
  * Lead Author(s):
  * @author Lyle Steger
@@ -23,7 +24,7 @@ import java.util.Hashtable;
 import java.util.Random;
 
 public class PowerCard extends Card implements Special { // a PowerCard is IS-A Card and IS special
-	private Hashtable<String, ArrayList<String>> abilities;
+	private Hashtable<String, String> abilities; // a PowerCard HAS-Many different abilities
 	boolean isAbilityGenerated; // a power card knows when it has been activated
 
 	/**
@@ -39,17 +40,9 @@ public class PowerCard extends Card implements Special { // a PowerCard is IS-A 
 		// Power card has just been created so it's ability hasn't been generated
 		isAbilityGenerated = false;
 		// Adds the keys(Ability Category) and the value(what the ability does)
-		abilities.put("Risk", new ArrayList<>());
-		abilities.get("Risk").add("DoubleDmg");
-		abilities.put("Insight", new ArrayList<>());
-		abilities.get("Insight").add("WinOrLose");
-		abilities.put("Control", new ArrayList<>());
-		abilities.get("Control").add("StopDrawing");
-		
-		//Might add these later if game is not too complicated
-		//abilities.get("Risk").add("ForcedCardDraw");//testing this out
-		//abilities.get("Insight").add("WhatNext");//testing this out
-		//abilities.get("Control").add("RefreshHand");//testing this out
+		abilities.put("Risk", "DoubleDmg");
+		abilities.put("Insight", "WinOrLose");
+		abilities.put("Control", "StopDrawing");
 	}
 
 	/**
@@ -62,11 +55,8 @@ public class PowerCard extends Card implements Special { // a PowerCard is IS-A 
 			if (abilities.containsKey(key)) {
 				// If the ability is listed the the abilities hashtable
 				// pick random ability in that category for the power card
-				Random random = new Random();
-				int index;
-				index = random.nextInt(abilities.get(key).size());
 				setSuit(key);
-				setRank(abilities.get(key).get(index));
+				setRank(abilities.get(key));
 				setValue(0);
 				this.isAbilityGenerated = true;
 			}

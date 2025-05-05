@@ -21,9 +21,9 @@
  */
 
 public class InvalidAmountOfCardsException extends Exception {
-	
-	public InvalidAmountOfCardsException(Player p1)
-	{
-		super(p1.getName() + " has an Exceeded the max amount of cards. They have " + p1.getHand().size() + " cards in their hand");
+
+	public InvalidAmountOfCardsException(Player player) {
+		super(player.getName() + " has an Exceeded the max amount of cards. They have " + player.getHand().size()
+				+ " cards in their hand");
 	}
 }

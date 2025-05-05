@@ -21,16 +21,11 @@
  */
 
 public class InvalidCardException extends Exception {
-	
-	public InvalidCardException(Card card)
-	{
+
+	public InvalidCardException(Card card) {
 		super(card != null
-				? "This is not a valid Card: " + 
-				  "Suit-" + card.getSuit() +
-				  ", Rank-" + card.getRank() +
-				  ", Value-" + card.getValue() +
-				  " is not allowed"
-				  : "Error: Null Card Added to User's hand");
+				? "This is not a valid Card: " + "Suit-" + card.getSuit() + ", Rank-" + card.getRank() + ", Value-"
+						+ card.getValue() + " is not allowed"
+				: "Error: Null Card Added to User's hand");
 	}
 }
-

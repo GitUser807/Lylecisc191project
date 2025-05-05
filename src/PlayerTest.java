@@ -1,38 +1,40 @@
 /**
  * Lead Author(s):
- * @author Lyle Steger
- * <<add additional lead authors here, with a full first and last name>>
  * 
- * Other contributors:
- * <<add additional contributors (mentors, tutors, friends) here, with contact information>>
+ * @author Lyle Steger <<add additional lead authors here, with a full first and
+ *         last name>>
  * 
- * References:
- * Morelli, R., & Walde, R. (2016). Java, Java, Java: Object-Oriented Problem Solving.
- * Retrieved from https://open.umn.edu/opentextbooks/textbooks/java-java-java-object-oriented-problem-solving
+ *         Other contributors: <<add additional contributors (mentors, tutors,
+ *         friends) here, with contact information>>
  * 
- *  
- * Version/date: 2.0 
+ *         References: Morelli, R., & Walde, R. (2016). Java, Java, Java:
+ *         Object-Oriented Problem Solving. Retrieved from
+ *         https://open.umn.edu/opentextbooks/textbooks/java-java-java-object-oriented-problem-solving
  * 
- * Responsibilities of class: Tests the player's of the game work as intended
+ * 
+ *         Version/date: 2.0
+ * 
+ *         Responsibilities of class: Tests the player's of the game work as
+ *         intended
  * 
  *
  */
 
 public class PlayerTest {
 	public static void main(String[] args) {
-		//First testing the User class
+		// First testing the User class
 		System.out.println("Testing the User class:");
 
-		//Sets the users name to Herald
+		// Sets the users name to Herald
 		User user = new User("Herald");
 		System.out.println("User created: " + user.getName());
-		//Checks to see if the name was successfully assigned to the user
+		// Checks to see if the name was successfully assigned to the user
 		assert (user.getName().equals("Herald"));
-		//Checks to see if there is any card currently in the user's hand
+		// Checks to see if there is any card currently in the user's hand
 		System.out.println("Initial hand size: " + user.getHand().size());
 		assert (user.getHand().isEmpty());
 
-		//Checks to see if a valid card was successfully added to the user's hand 
+		// Checks to see if a valid card was successfully added to the user's hand
 		Card card1 = new Card("spades", "5", 5);
 		try {
 			user.addCardToHand(card1);
@@ -70,7 +72,7 @@ public class PlayerTest {
 		}
 		assert (exceptionThrown == true);
 		assert (user.getScore() == 27);
-		
+
 		// Try to add a non-valid card to the user's hand
 		user.emptyHand();
 		assert (user.getScore() == 0);
@@ -89,7 +91,7 @@ public class PlayerTest {
 		}
 		assert (user.getScore() == 0);
 		assert (exceptionThrown == true);
-		
+
 		// Try to add a non-valid card to the user's hand
 		exceptionThrown = false;
 		try {
@@ -106,12 +108,10 @@ public class PlayerTest {
 		assert (user.getScore() == 0);
 		assert (exceptionThrown == true);
 		System.out.println();
-		
 
-
-		//Testing the Dealer class
+		// Testing the Dealer class
 		System.out.println("Testing the Dealer class:");
-		//Testing to see if Dealer can properly be assigned a name
+		// Testing to see if Dealer can properly be assigned a name
 		Dealer dealer = new Dealer("David");
 		System.out.println("Dealer created: " + dealer.getName());
 		assert (dealer.getName().equals("David"));

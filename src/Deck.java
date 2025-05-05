@@ -1,3 +1,4 @@
+
 /**
  * Lead Author(s):
  * @author Lyle Steger
@@ -46,31 +47,27 @@ public class Deck {
 	}
 
 	public boolean isDeckEmpty() {
-		if (deckOfCards.peek()!=null) {
+		if (deckOfCards.peek() != null) {
 			return true;
 		}
 		return false;
 	}
 
 	/*
-	public int deckSize() {
-		return deckOfCards.size();
-	}
-	*/
+	 * public int deckSize() { return deckOfCards.size(); }
+	 */
 
 	public void generateDeck() {
 		generateAllPossibleCards();
 		Random random = new Random();
 		int randomNumber;
-		while(deckOfPossibleCards.size()>0)
-		{
+		while (deckOfPossibleCards.size() > 0) {
 			randomNumber = random.nextInt(deckOfPossibleCards.size());
 			deckOfCards.add(deckOfPossibleCards.remove(randomNumber));
 		}
 	}
-	
-	public void generateAllPossibleCards()
-	{
+
+	public void generateAllPossibleCards() {
 		for (int suit = 0; suit < SUITS.length; suit++) {
 			for (int rank = 0; rank < RANKS.length; rank++) {
 				deckOfPossibleCards.add(new BlackjackCard(SUITS[suit], RANKS[rank], VALUES[rank]));
