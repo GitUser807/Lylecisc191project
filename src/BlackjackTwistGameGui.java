@@ -12,9 +12,13 @@
  * Retrieved from https://open.umn.edu/opentextbooks/textbooks/java-java-java-object-oriented-problem-solving
  * https://www.youtube.com/watch?v=QEF62Fm81h4
  *  
+ * Cards Citation:
+ * One Schoolhouse. (2023). Card images provided in AP Computer Science A course materials.
+ *  
  * Version/date: 2.0 
  * 
  * Responsibilities of class: Tests to seem if the game works as intended
+ * 
  * 
  *
  */
@@ -186,6 +190,9 @@ public class BlackjackTwistGameGui {
 	/**
 	 * this is responsible for adding the gui card version of a card to the user's
 	 * hand
+	 * 
+	 * card image citation:
+	 * One Schoolhouse. (2023). Card images provided in AP Computer Science A course materials.
 	 * 
 	 * @param message what information we want to record in the file
 	 */
