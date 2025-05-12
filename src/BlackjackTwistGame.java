@@ -229,6 +229,7 @@ public class BlackjackTwistGame {
 	 * sets the start of the game
 	 */
 	public void startRound() {
+		roundNum++;
 		// writes messages to the game stats file
 		writeToGameStatsFile("Round: " + roundNum);
 		writeToGameStatsFile("");
@@ -426,7 +427,6 @@ public class BlackjackTwistGame {
 	 */
 	public void newRound() {
 		// resets some field variables back to its default state
-		roundNum++;
 		amountDamageTaken = 5;
 		disabledHitOption = false;
 		sendFutureMessage = false;

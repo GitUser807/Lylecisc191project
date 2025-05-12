@@ -12,8 +12,9 @@
  * Retrieved from https://open.umn.edu/opentextbooks/textbooks/java-java-java-object-oriented-problem-solving
  * https://www.youtube.com/watch?v=QEF62Fm81h4
  *  
- * Cards Citation:
+ * Cards Citations:
  * One Schoolhouse. (2023). Card images provided in AP Computer Science A course materials.
+ * https://www.freepik.com/free-photos-vectors/playing-card-design(Back of card picture)
  *  
  * Version/date: 2.0 
  * 
