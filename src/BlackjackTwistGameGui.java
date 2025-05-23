@@ -623,11 +623,7 @@ public class BlackjackTwistGameGui {
 	}
 
 	public static void main(String[] args) {
-		SwingUtilities.invokeLater(new Runnable() {
-			public void run() {
-				BlackjackTwistGameGui gui = new BlackjackTwistGameGui();
-				gui.startGame("Player1"); // Start game with player name
-			}
-		});
+		BlackjackTwistGameGui gui = new BlackjackTwistGameGui();
+		gui.startGame("Player1"); // Start game with player name
 	}
 }
