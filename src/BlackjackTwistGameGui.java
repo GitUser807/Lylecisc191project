@@ -56,13 +56,13 @@ public class BlackjackTwistGameGui {
 	private JLabel dealerName;// BlackjackTwistGameGui HAS-A label where it displays the dealer's name
 	private boolean revealedDealerCards;// BlackjackTwistGameGui knows when to show the all the cards in the dealer's
 										// hand
-	JButton riskButton;// BlackjackTwistGameGui HAS-A button where the user can activate the risk power
+	private JButton riskButton;// BlackjackTwistGameGui HAS-A button where the user can activate the risk power
 						// card
-	JButton insightButton;// BlackjackTwistGameGui HAS-A button where the user can activate the insight
+	private JButton insightButton;// BlackjackTwistGameGui HAS-A button where the user can activate the insight
 							// power card
-	JButton controlButton;// BlackjackTwistGameGui HAS-A button where the user can activate the control
+	private JButton controlButton;// BlackjackTwistGameGui HAS-A button where the user can activate the control
 							// power card
-	JButton cheatsButton;// BlackjackTwistGameGui HAS-A button where the user can activate cheats giving
+	private JButton cheatsButton;// BlackjackTwistGameGui HAS-A button where the user can activate cheats giving
 							// them information they
 							// shouldn't know
 

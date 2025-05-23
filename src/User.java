@@ -20,7 +20,7 @@
  */
 
 public class User extends Player {// The user IS-A player
-	int maxCard;// The user HAS-A max amount of cards
+	private int maxCard;// The user HAS-A max amount of cards
 
 	/**
 	 * constructor for the player class
