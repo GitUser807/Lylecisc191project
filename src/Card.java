@@ -21,8 +21,8 @@ import java.util.Hashtable;
  */
 
 public class Card {
-	private static final String[] validNormalSuitDescription = {"hearts", "diamonds", "clubs", "spades"}; //Holds all legal suits a normal card can have
-	private static final String[] validPowerSuitDescription = {"Special","Risk","Insight","Control"}; //Holds all legal suits a power card can have
+	private static final String[] validNormalSuitDescription = {"hearts", "diamonds", "clubs", "spades"};//a Card HAS-Many different valid suits
+	private static final String[] validPowerSuitDescription = {"Special","Risk","Insight","Control"};//a Card HAS-Many different power suits valid 
 	private Hashtable<String, Integer> validNormalCardPairingDescriptions;//Holds all legal rank and suit pairings that a normal card can have
 	private Hashtable<String, Integer> validPowerCardPairingDescriptions;//Holds all legal rank and suit pairings that a power card can have
 	private String suit; // a Card HAS-A suit

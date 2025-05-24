@@ -26,12 +26,14 @@ import java.util.Queue;
 import java.util.Random;
 
 public class Deck {
-	private ArrayList<BlackjackCard> deckOfPossibleCards;
-	private Queue<BlackjackCard> deckOfCards;
-	private static final String[] SUITS = { "hearts", "diamonds", "clubs", "spades" };
+	private ArrayList<BlackjackCard> deckOfPossibleCards;//A Deck HAS-MANY different possible Blackjack cards
+	private Queue<BlackjackCard> deckOfCards;//A Deck HAS-Many different cards inside of it
+	private static final String[] SUITS = { "hearts", "diamonds", "clubs", "spades" };//A Deck HAS-MANY different types of suits for 
+																					//its respective cards
 	private static final String[] RANKS = { "2", "3", "4", "5", "6", "7", "8", "9", "10", "jack", "queen", "king",
-			"ace" };
-	private static final int[] VALUES = { 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 11 };
+			"ace" };//A Deck HAS-MANY cards with specific ranks  
+	
+	private static final int[] VALUES = { 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 11 };//A Deck HAS-MANY cards with specific values 
 
 	public Deck() {
 		deckOfCards = new LinkedList<>();

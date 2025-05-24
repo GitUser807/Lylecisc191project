@@ -31,15 +31,15 @@ public class BlackjackTwistGame {
 	private Deck deck;// BlackjackTwist HAS-A deck of cards
 	private User user;// BlackjackTwist HAS-A user
 	private Dealer dealer;// BlackjackTwist HAS-A dealer
-	private boolean gameOver;// keeps track to see if the game is over
-	private boolean roundOver;// keeps track to see if the round is over
-	private String userLastMove;// keeps track of user's last move
-	private boolean userTurn;// keeps track to see if it is the user's turn or not
-	private String dealerLastMove;// keeps track of dealers last move
-	private int amountDamageTaken;// keeps track of how much damage done when either party loses
-	private boolean disabledHitOption;// keeps track if user can choose to hit or not
-	private boolean sendFutureMessage;// keeps track of if the insight power card has been used
-	private boolean extraInfo;// keeps track to turn on cheats or not
+	private boolean gameOver;// BlackjackTwist HAS-A indicator of when the game is over
+	private boolean roundOver;// BlackjackTwist HAS-A indicator of when the round is over
+	private String userLastMove;//BlackjackTwist HAS-A tracker of the user's last move
+	private boolean userTurn;//BlackjackTwist HAS-A indicator of when it is the user's turn
+	private String dealerLastMove;//BlackjackTwist HAS-A tracker for the dealer most recent move
+	private int amountDamageTaken;//BlackjackTwist HAS-A tracker of how much damage the loser will take
+	private boolean disabledHitOption;//BlackjackTwist HAS-A tracker for when the hit option has been disabled
+	private boolean sendFutureMessage;//BlackjackTwist HAS-A tracker indicating when to send player an insightful message
+	private boolean extraInfo;//BlackjackTwist HAS-A tracker indicating when allow the user's to turn on cheats
 
 	/**
 	 * Constructor method for the rank of the BlackjackCard

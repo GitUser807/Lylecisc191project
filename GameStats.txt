@@ -3,35 +3,60 @@
      User Health: 20
      Dealer Health: 20
      
-     User's Starting cards: Suit: diamonds, Rank: 3, Value: 3 | Suit: clubs, Rank: jack, Value: 10
-     Dealer's Starting cards: Suit: clubs, Rank: 3, Value: 3 | Suit: diamonds, Rank: 7, Value: 7
+     User's Starting cards: Suit: spades, Rank: ace, Value: 11 | Suit: hearts, Rank: 9, Value: 9
+     Dealer's Starting cards: Suit: spades, Rank: 4, Value: 4 | Suit: clubs, Rank: 2, Value: 2
      
-     Dealer's score: 10
-     User's score: 13
+     Dealer's score: 6
+     User's score: 20
      
      User's turn
-     User's move: Stand
-     User's hand: Suit: diamonds, Rank: 3, Value: 3 | Suit: clubs, Rank: jack, Value: 10 | 
+     User's move: Hit
+     User draws a : Suit: diamonds, Rank: 7, Value: 7
+     User's hand: Suit: spades, Rank: ace, Value: 11 | Suit: hearts, Rank: 9, Value: 9 | Suit: diamonds, Rank: 7, Value: 7 | 
      
      Dealer's turn
      Dealer's move: Hit
-     Dealer draws a : Suit: diamonds, Rank: queen, Value: 10
-     Dealer's hand: Suit: clubs, Rank: 3, Value: 3 | Suit: diamonds, Rank: 7, Value: 7 | Suit: diamonds, Rank: queen, Value: 10 | 
+     Dealer draws a : Suit: hearts, Rank: 3, Value: 3
+     Dealer's hand: Suit: spades, Rank: 4, Value: 4 | Suit: clubs, Rank: 2, Value: 2 | Suit: hearts, Rank: 3, Value: 3 | 
      
-     User's score: 13
-     Dealer's score: 20
+     User's score: 27
+     Dealer's score: 9
      
      User's turn
      User's move: Stand
-     User's hand: Suit: diamonds, Rank: 3, Value: 3 | Suit: clubs, Rank: jack, Value: 10 | 
+     User's hand: Suit: spades, Rank: ace, Value: 11 | Suit: hearts, Rank: 9, Value: 9 | Suit: diamonds, Rank: 7, Value: 7 | 
+     
+     Dealer's turn
+     Dealer's move: Hit
+     Dealer draws a : Suit: clubs, Rank: 6, Value: 6
+     Dealer's hand: Suit: spades, Rank: 4, Value: 4 | Suit: clubs, Rank: 2, Value: 2 | Suit: hearts, Rank: 3, Value: 3 | Suit: clubs, Rank: 6, Value: 6 | 
+     
+     User's score: 27
+     Dealer's score: 15
+     
+     User's turn
+     User's move: Stand
+     User's hand: Suit: spades, Rank: ace, Value: 11 | Suit: hearts, Rank: 9, Value: 9 | Suit: diamonds, Rank: 7, Value: 7 | 
+     
+     Dealer's turn
+     Dealer's move: Hit
+     Dealer draws a : Suit: spades, Rank: queen, Value: 10
+     Dealer's hand: Suit: spades, Rank: 4, Value: 4 | Suit: clubs, Rank: 2, Value: 2 | Suit: hearts, Rank: 3, Value: 3 | Suit: clubs, Rank: 6, Value: 6 | Suit: spades, Rank: queen, Value: 10 | 
+     
+     User's score: 27
+     Dealer's score: 25
+     
+     User's turn
+     User's move: Stand
+     User's hand: Suit: spades, Rank: ace, Value: 11 | Suit: hearts, Rank: 9, Value: 9 | Suit: diamonds, Rank: 7, Value: 7 | 
      
      Dealer's turn
      Dealer's move: Stand
-     Dealer's hand: Suit: clubs, Rank: 3, Value: 3 | Suit: diamonds, Rank: 7, Value: 7 | Suit: diamonds, Rank: queen, Value: 10 | 
-     Dealer's score: 20
+     Dealer's hand: Suit: spades, Rank: 4, Value: 4 | Suit: clubs, Rank: 2, Value: 2 | Suit: hearts, Rank: 3, Value: 3 | Suit: clubs, Rank: 6, Value: 6 | Suit: spades, Rank: queen, Value: 10 | 
+     Dealer's score: 25
      
-     User's score: 13
-     Dealer's score: 20
+     User's score: 27
+     Dealer's score: 25
      
      Dealer Wins!
      
@@ -40,205 +65,97 @@
      User Health: 15
      Dealer Health: 20
      
-     User's Starting cards: Suit: clubs, Rank: 7, Value: 7 | Suit: diamonds, Rank: 10, Value: 10
-     Dealer's Starting cards: Suit: hearts, Rank: 4, Value: 4 | Suit: spades, Rank: 5, Value: 5
+     User's Starting cards: Suit: clubs, Rank: 8, Value: 8 | Suit: hearts, Rank: 6, Value: 6
+     Dealer's Starting cards: Suit: hearts, Rank: 7, Value: 7 | Suit: hearts, Rank: 10, Value: 10
      
-     Dealer's score: 9
-     User's score: 17
-     
-     User's turn
-     User's move: Stand
-     User's hand: Suit: clubs, Rank: 7, Value: 7 | Suit: diamonds, Rank: 10, Value: 10 | 
-     
-     Dealer's turn
-     Dealer's move: Hit
-     Dealer draws a : Suit: spades, Rank: 6, Value: 6
-     Dealer's hand: Suit: hearts, Rank: 4, Value: 4 | Suit: spades, Rank: 5, Value: 5 | Suit: spades, Rank: 6, Value: 6 | 
-     
-     User's score: 17
-     Dealer's score: 15
+     Dealer's score: 17
+     User's score: 14
      
      User's turn
-     User's move: Stand
-     User's hand: Suit: clubs, Rank: 7, Value: 7 | Suit: diamonds, Rank: 10, Value: 10 | 
-     
-     Dealer's turn
-     Dealer's move: Hit
-     Dealer draws a : Suit: diamonds, Rank: 9, Value: 9
-     Dealer's hand: Suit: hearts, Rank: 4, Value: 4 | Suit: spades, Rank: 5, Value: 5 | Suit: spades, Rank: 6, Value: 6 | Suit: diamonds, Rank: 9, Value: 9 | 
-     
-     User's score: 17
-     Dealer's score: 24
-     
-     User's turn
-     User's move: Stand
-     User's hand: Suit: clubs, Rank: 7, Value: 7 | Suit: diamonds, Rank: 10, Value: 10 | 
+     User's move: Hit
+     User draws a : Suit: clubs, Rank: jack, Value: 10
+     User's hand: Suit: clubs, Rank: 8, Value: 8 | Suit: hearts, Rank: 6, Value: 6 | Suit: clubs, Rank: jack, Value: 10 | 
      
      Dealer's turn
      Dealer's move: Stand
-     Dealer's hand: Suit: hearts, Rank: 4, Value: 4 | Suit: spades, Rank: 5, Value: 5 | Suit: spades, Rank: 6, Value: 6 | Suit: diamonds, Rank: 9, Value: 9 | 
-     Dealer's score: 24
+     Dealer's hand: Suit: hearts, Rank: 7, Value: 7 | Suit: hearts, Rank: 10, Value: 10 | 
+     Dealer's score: 17
      
-     User's score: 17
-     Dealer's score: 24
+     User's score: 24
+     Dealer's score: 17
      
-     User Wins!
-     Power Card Added
+     User's turn
+     User's move: Stand
+     User's hand: Suit: clubs, Rank: 8, Value: 8 | Suit: hearts, Rank: 6, Value: 6 | Suit: clubs, Rank: jack, Value: 10 | 
+     
+     Dealer's turn
+     Dealer's move: Stand
+     Dealer's hand: Suit: hearts, Rank: 7, Value: 7 | Suit: hearts, Rank: 10, Value: 10 | 
+     Dealer's score: 17
+     
+     User's score: 24
+     Dealer's score: 17
+     
+     Dealer Wins!
      
  Round: 3
      
-     User Health: 15
-     Dealer Health: 15
+     User Health: 10
+     Dealer Health: 20
      
-     User's Starting cards: Suit: spades, Rank: jack, Value: 10 | Suit: spades, Rank: 4, Value: 4
-     Dealer's Starting cards: Suit: hearts, Rank: 8, Value: 8 | Suit: spades, Rank: 2, Value: 2
+     User's Starting cards: Suit: spades, Rank: jack, Value: 10 | Suit: diamonds, Rank: 4, Value: 4
+     Dealer's Starting cards: Suit: hearts, Rank: ace, Value: 11 | Suit: clubs, Rank: 3, Value: 3
      
-     Dealer's score: 10
+     Dealer's score: 14
      User's score: 14
      
      User's turn
      User's move: Stand
-     User's hand: Suit: Special, Rank: None, Value: 0 | Suit: spades, Rank: jack, Value: 10 | Suit: spades, Rank: 4, Value: 4 | 
+     User's hand: Suit: spades, Rank: jack, Value: 10 | Suit: diamonds, Rank: 4, Value: 4 | 
      
      Dealer's turn
      Dealer's move: Hit
-     Dealer draws a : Suit: clubs, Rank: ace, Value: 11
-     Dealer's hand: Suit: hearts, Rank: 8, Value: 8 | Suit: spades, Rank: 2, Value: 2 | Suit: clubs, Rank: ace, Value: 11 | 
+     Dealer draws a : Suit: diamonds, Rank: 2, Value: 2
+     Dealer's hand: Suit: hearts, Rank: ace, Value: 11 | Suit: clubs, Rank: 3, Value: 3 | Suit: diamonds, Rank: 2, Value: 2 | 
      
      User's score: 14
-     Dealer's score: 21
+     Dealer's score: 16
      
      User's turn
      User's move: Stand
-     User's hand: Suit: Special, Rank: None, Value: 0 | Suit: spades, Rank: jack, Value: 10 | Suit: spades, Rank: 4, Value: 4 | 
+     User's hand: Suit: spades, Rank: jack, Value: 10 | Suit: diamonds, Rank: 4, Value: 4 | 
+     
+     Dealer's turn
+     Dealer's move: Hit
+     Dealer draws a : Suit: diamonds, Rank: ace, Value: 11
+     Dealer's hand: Suit: hearts, Rank: ace, Value: 11 | Suit: clubs, Rank: 3, Value: 3 | Suit: diamonds, Rank: 2, Value: 2 | Suit: diamonds, Rank: ace, Value: 11 | 
+     
+     User's score: 14
+     Dealer's score: 27
+     
+     User's turn
+     User's move: Stand
+     User's hand: Suit: spades, Rank: jack, Value: 10 | Suit: diamonds, Rank: 4, Value: 4 | 
      
      Dealer's turn
      Dealer's move: Stand
-     Dealer's hand: Suit: hearts, Rank: 8, Value: 8 | Suit: spades, Rank: 2, Value: 2 | Suit: clubs, Rank: ace, Value: 11 | 
-     Dealer's score: 21
+     Dealer's hand: Suit: hearts, Rank: ace, Value: 11 | Suit: clubs, Rank: 3, Value: 3 | Suit: diamonds, Rank: 2, Value: 2 | Suit: diamonds, Rank: ace, Value: 11 | 
+     Dealer's score: 27
      
      User's score: 14
-     Dealer's score: 21
+     Dealer's score: 27
      
-     Dealer Wins!
+     User Wins!
+     Power Card Added
      
  Round: 4
      
      User Health: 10
      Dealer Health: 15
      
-     User's Starting cards: Suit: spades, Rank: 8, Value: 8 | Suit: diamonds, Rank: 5, Value: 5
-     Dealer's Starting cards: Suit: hearts, Rank: 5, Value: 5 | Suit: hearts, Rank: 9, Value: 9
+     User's Starting cards: Suit: spades, Rank: 8, Value: 8 | Suit: spades, Rank: 9, Value: 9
+     Dealer's Starting cards: Suit: spades, Rank: 6, Value: 6 | Suit: diamonds, Rank: 10, Value: 10
      
-     Dealer's score: 14
-     User's score: 13
+     Dealer's score: 16
+     User's score: 17
      
-     User's turn
-     User's move: Stand
-     User's hand: Suit: Special, Rank: None, Value: 0 | Suit: spades, Rank: 8, Value: 8 | Suit: diamonds, Rank: 5, Value: 5 | 
-     
-     Dealer's turn
-     Dealer's move: Hit
-     Dealer draws a : Suit: diamonds, Rank: 4, Value: 4
-     Dealer's hand: Suit: hearts, Rank: 5, Value: 5 | Suit: hearts, Rank: 9, Value: 9 | Suit: diamonds, Rank: 4, Value: 4 | 
-     
-     User's score: 13
-     Dealer's score: 18
-     
-     User's turn
-     User's move: Hit
-     User draws a : Suit: spades, Rank: queen, Value: 10
-     User's hand: Suit: Special, Rank: None, Value: 0 | Suit: spades, Rank: 8, Value: 8 | Suit: diamonds, Rank: 5, Value: 5 | Suit: spades, Rank: queen, Value: 10 | 
-     
-     Dealer's turn
-     Dealer's move: Stand
-     Dealer's hand: Suit: hearts, Rank: 5, Value: 5 | Suit: hearts, Rank: 9, Value: 9 | Suit: diamonds, Rank: 4, Value: 4 | 
-     Dealer's score: 18
-     
-     User's score: 23
-     Dealer's score: 18
-     
-     User's turn
-     User's move: Stand
-     User's hand: Suit: Special, Rank: None, Value: 0 | Suit: spades, Rank: 8, Value: 8 | Suit: diamonds, Rank: 5, Value: 5 | Suit: spades, Rank: queen, Value: 10 | 
-     
-     Dealer's turn
-     Dealer's move: Stand
-     Dealer's hand: Suit: hearts, Rank: 5, Value: 5 | Suit: hearts, Rank: 9, Value: 9 | Suit: diamonds, Rank: 4, Value: 4 | 
-     Dealer's score: 18
-     
-     User's score: 23
-     Dealer's score: 18
-     
-     Dealer Wins!
-     
- Round: 5
-     
-     User Health: 5
-     Dealer Health: 15
-     
-     User's Starting cards: Suit: hearts, Rank: jack, Value: 10 | Suit: diamonds, Rank: ace, Value: 11
-     Dealer's Starting cards: Suit: hearts, Rank: 10, Value: 10 | Suit: clubs, Rank: 4, Value: 4
-     
-     Dealer's score: 14
-     User's score: 21
-     
-     Player Activates Risk PowerCard!
-     
-     User's turn
-     User's move: Stand
-     User's hand: Suit: hearts, Rank: jack, Value: 10 | Suit: diamonds, Rank: ace, Value: 11 | 
-     
-     Dealer's turn
-     Dealer's move: Hit
-     Dealer draws a : Suit: clubs, Rank: 6, Value: 6
-     Dealer's hand: Suit: hearts, Rank: 10, Value: 10 | Suit: clubs, Rank: 4, Value: 4 | Suit: clubs, Rank: 6, Value: 6 | 
-     
-     User's score: 21
-     Dealer's score: 20
-     
-     User's turn
-     User's move: Stand
-     User's hand: Suit: hearts, Rank: jack, Value: 10 | Suit: diamonds, Rank: ace, Value: 11 | 
-     
-     Dealer's turn
-     Dealer's move: Stand
-     Dealer's hand: Suit: hearts, Rank: 10, Value: 10 | Suit: clubs, Rank: 4, Value: 4 | Suit: clubs, Rank: 6, Value: 6 | 
-     Dealer's score: 20
-     
-     User's score: 21
-     Dealer's score: 20
-     
-     User Wins!
-     Power Card Added
-     
- Round: 6
-     
-     User Health: 5
-     Dealer Health: 5
-     
-     User's Starting cards: Suit: diamonds, Rank: king, Value: 10 | Suit: diamonds, Rank: 8, Value: 8
-     Dealer's Starting cards: Suit: hearts, Rank: 2, Value: 2 | Suit: clubs, Rank: 10, Value: 10
-     
-     Dealer's score: 12
-     User's score: 18
-     
-     Player Activates Control PowerCard!
-     
-     User's turn
-     User's move: Stand
-     User's hand: Suit: diamonds, Rank: king, Value: 10 | Suit: diamonds, Rank: 8, Value: 8 | 
-     
-     Dealer's turn
-     Dealer's move: Stand
-     Dealer's hand: Suit: hearts, Rank: 2, Value: 2 | Suit: clubs, Rank: 10, Value: 10 | 
-     Dealer's score: 12
-     
-     User's score: 18
-     Dealer's score: 12
-     
-     User Wins!
-     Power Card Added
-     
- Game Over!
-     User Wins The Game!

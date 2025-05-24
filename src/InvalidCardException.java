@@ -20,7 +20,7 @@
 /**
  */
 
-public class InvalidCardException extends Exception {
+public class InvalidCardException extends Exception { //InvalidCardException IS-A exception
 
 	public InvalidCardException(Card card) {
 		super(card != null

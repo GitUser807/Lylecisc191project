@@ -19,7 +19,7 @@
  *
  */
 
-public class BlackjackCard extends Card// a blackjack card IS-A card
+public class BlackjackCard extends Card//a blackjack card IS-A card
 {
 	/**
 	 * Constructor method for the rank of the BlackjackCard

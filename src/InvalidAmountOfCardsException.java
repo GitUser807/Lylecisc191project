@@ -20,7 +20,7 @@
 /**
  */
 
-public class InvalidAmountOfCardsException extends Exception {
+public class InvalidAmountOfCardsException extends Exception { //InvalidAmountOfCardsException IS-A exception
 
 	public InvalidAmountOfCardsException(Player player) {
 		super(player.getName() + " has an Exceeded the max amount of cards. They have " + player.getHand().size()

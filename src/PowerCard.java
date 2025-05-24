@@ -25,7 +25,7 @@ import java.util.Random;
 
 public class PowerCard extends Card implements Special { // a PowerCard is IS-A Card and IS special
 	private Hashtable<String, String> abilities; // a PowerCard HAS-Many different abilities
-	boolean isAbilityGenerated; // a power card knows when it has been activated
+	boolean isAbilityGenerated; // a power cards HAS-A indicator of when it's ability has been generated
 
 	/**
 	 * Constructor method for the rank of the BlackjackCard
