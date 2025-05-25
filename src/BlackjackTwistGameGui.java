@@ -34,7 +34,6 @@ import java.util.Hashtable;
 import java.util.Timer;
 import java.util.TimerTask;
 
-//currently editing this
 public class BlackjackTwistGameGui {
 
 	private JFrame frame;// BlackjackTwistGameGui HAS-A frame where the game will be
@@ -66,6 +65,8 @@ public class BlackjackTwistGameGui {
 							// them information they
 							// shouldn't know
 
+
+	
 	public BlackjackTwistGameGui() {
 		revealedDealerCards = false;
 		riskButton = new JButton("Risk");
@@ -87,8 +88,17 @@ public class BlackjackTwistGameGui {
 		panel.setLayout(null);
 		panel.setPreferredSize(new Dimension(1100, 800));
 		frame.add(panel);
-
-		// Creates the background of the video game
+		//Creates the background of the video game
+		//I used getClass().getResource(picUrl) to load images from the classpath 
+		//because it ensures the image can be found whether 
+		//I'm running the program in an IDE or from a JAR file. 
+		//I first learned this approach during a hackathon where one of my teammates 
+		//explained that it's the recommended way to load bundled resources in Java, 
+		//especially for GUI applications using Swing.
+		//The reason I stick with this method is because it makes the app more portable. 
+		//It works even if the working directory changes, as long as the image is 
+		//included in the project's resources folder or the compiled JAR. 
+		//This avoids hardcoding file system paths, which can break when the project is moved to another computer.
 		String picUrl = "/Background/GameBackground.jpeg";
 		ImageIcon backgroundImageIcon = new ImageIcon(getClass().getResource(picUrl));
 		Image backgroundImage = backgroundImageIcon.getImage().getScaledInstance(500, 500, Image.SCALE_SMOOTH);
