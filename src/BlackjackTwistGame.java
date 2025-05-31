@@ -4,6 +4,9 @@ import java.io.FileWriter;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
 /**
  * Lead Author(s):
  * 
@@ -33,13 +36,15 @@ public class BlackjackTwistGame {
 	private Dealer dealer;// BlackjackTwist HAS-A dealer
 	private boolean gameOver;// BlackjackTwist HAS-A indicator of when the game is over
 	private boolean roundOver;// BlackjackTwist HAS-A indicator of when the round is over
-	private String userLastMove;//BlackjackTwist HAS-A tracker of the user's last move
-	private boolean userTurn;//BlackjackTwist HAS-A indicator of when it is the user's turn
-	private String dealerLastMove;//BlackjackTwist HAS-A tracker for the dealer most recent move
-	private int amountDamageTaken;//BlackjackTwist HAS-A tracker of how much damage the loser will take
-	private boolean disabledHitOption;//BlackjackTwist HAS-A tracker for when the hit option has been disabled
-	private boolean sendFutureMessage;//BlackjackTwist HAS-A tracker indicating when to send player an insightful message
-	private boolean extraInfo;//BlackjackTwist HAS-A tracker indicating when allow the user's to turn on cheats
+	private String userLastMove;// BlackjackTwist HAS-A tracker of the user's last move
+	private boolean userTurn;// BlackjackTwist HAS-A indicator of when it is the user's turn
+	private String dealerLastMove;// BlackjackTwist HAS-A tracker for the dealer most recent move
+	private int amountDamageTaken;// BlackjackTwist HAS-A tracker of how much damage the loser will take
+	private boolean disabledHitOption;// BlackjackTwist HAS-A tracker for when the hit option has been disabled
+	private boolean sendFutureMessage;// BlackjackTwist HAS-A tracker indicating when to send player an insightful
+										// message
+	private boolean extraInfo;// BlackjackTwist HAS-A tracker indicating when allow the user's to turn on
+								// cheats
 
 	/**
 	 * Constructor method for the rank of the BlackjackCard
@@ -240,7 +245,10 @@ public class BlackjackTwistGame {
 			user.addCardToHand(userCard1);
 			user.addCardToHand(userCard2);
 		} catch (Exception e) {
+			gameOver = true;
 			System.out.println("Error: " + e.getMessage());
+			JOptionPane.showMessageDialog(new JFrame(), e.getMessage(), "Game Error", JOptionPane.INFORMATION_MESSAGE);
+			System.exit(0);
 		}
 		// writes messages to the game stats file
 		writeToGameStatsFile("User Health: " + user.getHealth());
@@ -250,8 +258,15 @@ public class BlackjackTwistGame {
 		Card dealerCard1 = deck.dealCard();
 		Card dealerCard2 = deck.dealCard();
 		// Adds 2 cards to the User's hand
-		dealer.addCardToHand(dealerCard1);
-		dealer.addCardToHand(dealerCard2);
+		try {
+			dealer.addCardToHand(dealerCard1);
+			dealer.addCardToHand(dealerCard2);
+		} catch (Exception e) {
+			gameOver = true;
+			System.out.println("Error: " + e.getMessage());
+			JOptionPane.showMessageDialog(new JFrame(), e.getMessage(), "Game Error", JOptionPane.INFORMATION_MESSAGE);
+			System.exit(0);
+		}
 		// writes messages to the game stats file
 		writeToGameStatsFile("Dealer's Starting cards: " + dealerCard1 + " | " + dealerCard2);
 		writeToGameStatsFile("");
@@ -280,7 +295,11 @@ public class BlackjackTwistGame {
 			try {
 				user.addCardToHand(card);
 			} catch (Exception e) {
+				gameOver = true;
 				System.out.println("Error: " + e.getMessage());
+				JOptionPane.showMessageDialog(new JFrame(), e.getMessage(), "Game Error",
+						JOptionPane.INFORMATION_MESSAGE);
+				System.exit(0);
 			}
 			userLastMove = "Hit";
 			userTurn = false;
@@ -321,7 +340,14 @@ public class BlackjackTwistGame {
 			if (dealer.getScore() < 17 && !disabledHitOption) {
 				// Adds card to dealer's hand
 				Card card = deck.dealCard();
-				dealer.addCardToHand(card);
+				try {
+					dealer.addCardToHand(card);
+				}catch(Exception e){
+					gameOver = true;
+					System.out.println("Error: " + e.getMessage());
+					JOptionPane.showMessageDialog(new JFrame(), e.getMessage(), "Game Error", JOptionPane.INFORMATION_MESSAGE);
+					System.exit(0);
+				}
 				dealerLastMove = "Hit";
 				userTurn = true;
 				// writes messages to the game stats file
@@ -376,7 +402,10 @@ public class BlackjackTwistGame {
 					try {
 						user.addCardToHand(new PowerCard());
 					} catch (Exception e) {
+						gameOver = true;
 						System.out.println("Error: " + e.getMessage());
+						JOptionPane.showMessageDialog(new JFrame(), e.getMessage(), "Game Error", JOptionPane.INFORMATION_MESSAGE);
+						System.exit(0);
 					}
 					writeToGameStatsFile("User Wins!");
 					writeToGameStatsFile("Power Card Added");
@@ -390,7 +419,10 @@ public class BlackjackTwistGame {
 				try {
 					user.addCardToHand(new PowerCard());
 				} catch (Exception e) {
+					gameOver = true;
 					System.out.println("Error: " + e.getMessage());
+					JOptionPane.showMessageDialog(new JFrame(), e.getMessage(), "Game Error", JOptionPane.INFORMATION_MESSAGE);
+					System.exit(0);
 				}
 				writeToGameStatsFile("User Wins!");
 				writeToGameStatsFile("Power Card Added");
@@ -402,7 +434,10 @@ public class BlackjackTwistGame {
 				try {
 					user.addCardToHand(new PowerCard());
 				} catch (Exception e) {
+					gameOver = true;
 					System.out.println("Error: " + e.getMessage());
+					JOptionPane.showMessageDialog(new JFrame(), e.getMessage(), "Game Error", JOptionPane.INFORMATION_MESSAGE);
+					System.exit(0);
 				}
 				writeToGameStatsFile("User Wins!");
 				writeToGameStatsFile("Power Card Added");
